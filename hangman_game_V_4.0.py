@@ -296,10 +296,11 @@ while(True):
     guessed_str_by_user=""
     while(count>=-1):
         if(count==-1):
-            print("\n\n---------You lost the game----------\n!!!!!!!!!!! please try again !!!!!!!!!\n------------------------------------")
+            print("\n\n---------You lost the game----------\n!!!!!!!!! please try again !!!!!!!!!\n------------------------------------")
             play_again=input("Do you want to play again (y/n) :")
             if(play_again=='y'):
                 count=len(stages)-1
+                guessed_str_by_user=""
             else:
                 print("\nExit from the game BETTER LUCK NEXT TIME\n")
                 print(logo)
@@ -309,6 +310,7 @@ while(True):
             print(f"COIN YOU HAVE : {coin}\nIf you want to use your coin write : use")
         else:
             print(f"COIN YOU HAVE : {coin}")
+        print()
         guessed_char_by_user=input("guess the charecter : ")
         guessed_char_by_user=guessed_char_by_user.lower()
         if(guessed_char_by_user=="use" and coin>0):
@@ -325,6 +327,7 @@ while(True):
         else:
             print(stages[count])
             count-=1
+            print("Till Now Guessed word = ",guessed_str_by_user)
         if(i==len(guessed_word)):
             print("\n----------------------------------------------------------------\n  ------------Congratulation You win the match---------------\n-----------------------------------------------------------------\n")
             print(logo)
