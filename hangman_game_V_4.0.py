@@ -301,6 +301,7 @@ while(True):
             if(play_again=='y'):
                 count=len(stages)-1
                 guessed_str_by_user=""
+                i=0
             else:
                 print("\nExit from the game BETTER LUCK NEXT TIME\n")
                 print(logo)
